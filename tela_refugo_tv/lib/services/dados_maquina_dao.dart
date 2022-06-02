@@ -16,10 +16,10 @@ class DadosMaquinaDao {
     print(serverURL);
     print(maquinas);
 
-    final response = await http.get(
+    final response = await http.post(
       Uri.parse(
-        // '$serverURL/idw/rest/injet/monitorizacao/refugoshora?listaMaquinasSel=$maquinas',
-        'http://localhost:8000/getDados',
+        '$serverURL/idw/rest/injet/monitorizacao/refugoshora?listaMaquinasSel=$maquinas',
+        // 'http://localhost:8000/getDados',
       ),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
